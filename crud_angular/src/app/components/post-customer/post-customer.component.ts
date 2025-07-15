@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomerService } from 'src/app/service/customer.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { CustomerService } from 'src/app/service/customer.service';
 export class PostCustomerComponent implements OnInit {
   postCustomerForm!: FormGroup;
 
-  constructor(private customerService: CustomerService, private fb: FormBuilder) {}
+  constructor(private customerService: CustomerService, private fb: FormBuilder,private router:Router) {}
 
   ngOnInit(): void {
     this.postCustomerForm = this.fb.group({
@@ -24,6 +25,7 @@ export class PostCustomerComponent implements OnInit {
     console.log(this.postCustomerForm.value);
     this.customerService.postCustomer(this.postCustomerForm.value).subscribe((res)=>{
       console.log(res);
+      this.router.navigateByUrl("/");
     })
   }
 }

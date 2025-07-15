@@ -12,6 +12,10 @@ export class CustomerService {
   constructor(private http:HttpClient) { 
   }
   postCustomer(customer:any):Observable<any>{
-    return this.http.post(BASIC_URL+'/apo/customer',customer);
+    return this.http.post(BASIC_URL+"/apo/customer",customer);
+  }
+
+  getAllCustomers():Observable<any>{
+    return this.http.get(BASIC_URL+"/apo/customers");
   }
 }
