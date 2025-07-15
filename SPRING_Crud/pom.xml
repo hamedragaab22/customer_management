@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.codewithabdo</groupId>
-	<artifactId>CRUD_SPRING</artifactId>
+	<artifactId>SPRING_Crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CRUD_SPRING</name>
+	<name>SPRING_Crud</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

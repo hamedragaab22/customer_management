@@ -1,10 +1,10 @@
-package com.codewithabdo.CRUD_SPRING;
+package com.codewithabdo.SPRING_Crud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudSpringApplicationTests {
+class SpringCrudApplicationTests {
 
 	@Test
 	void contextLoads() {

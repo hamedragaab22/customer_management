@@ -1,13 +1,13 @@
-package com.codewithabdo.CRUD_SPRING;
+package com.codewithabdo.SPRING_Crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudSpringApplication {
+public class SpringCrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudSpringApplication.class, args);
+		SpringApplication.run(SpringCrudApplication.class, args);
 	}
 
 }
