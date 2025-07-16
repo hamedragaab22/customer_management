@@ -2,10 +2,10 @@ package com.codewithabdo.SPRING_Crud.service;
 
 import com.codewithabdo.SPRING_Crud.entity.Customer;
 import com.codewithabdo.SPRING_Crud.repository.CustomerRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 
@@ -22,5 +22,14 @@ public class CustomerService {
 
     public List<Customer>getAllCustomers(){
         return customerRepository.findAll();
+    }
+
+    public Customer getCustomerById(Long id){
+        return customerRepository.findById(id).orElse(null);
+    }
+
+    public Customer updateCustomer(Customer customer) {
+        return customerRepository.save(customer);
+
     }
 }
