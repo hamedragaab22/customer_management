@@ -51,4 +51,14 @@ public class CustomerController {
         Customer updateeCustomer=customerService.updateCustomer(existingCustomer);
         return ResponseEntity.ok(customer);
     }
+    @DeleteMapping("/customer/{id}")
+    public ResponseEntity<?>deleteCustomer(@PathVariable Long id){
+        Customer existingCustomer=customerService.getCustomerById(id);
+        if (existingCustomer==null){
+            return ResponseEntity.notFound().build();
+        }
+        customerService.deleteCustomer(id);
+        return ResponseEntity.ok().build();
+
+    }
 }
